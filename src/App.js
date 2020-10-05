@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import MyNavbar from './components/myNavbar/myNavbar.component';
+import Intro1 from './components/Intro/intro1';
+import Service from './components/Service/Service';
+import {Parallax} from 'react-parallax';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <MyNavbar/>
+    <Parallax
+            blur={{ min: -15, max: 15 }}
+            bgImage={require('./images/HERO.jpeg')}
+            bgImageAlt="the dog"
+            strength={-200}
+    >
+    <Intro1/>
+    </Parallax>
+    <Service/>
     </div>
   );
 }
