@@ -10,13 +10,13 @@ function App() {
     <div className="App">
     <MyNavbar/>
     <Parallax
-            blur={{ min: -15, max: 15 }}
-            bgImage={require('./images/HERO.jpeg')}
-            bgImageAlt="the dog"
-            strength={-200}
-    >
-    <Intro1/>
-    </Parallax>
+            blur={10}
+            bgImage={require('./images/farm.jpg')}
+            bgImageAlt="the cat"
+            strength={200}
+        >
+        <Intro1/>
+        </Parallax>
     <Service/>
     </div>
   );
